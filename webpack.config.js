@@ -1,4 +1,5 @@
 const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
 	entry: "./src/assets/scripts/main.js",
@@ -11,6 +12,13 @@ module.exports = {
 		open: true,
 		watchContentBase: true,
 	},
+	resolve: {
+		// import './foo.vue' の代わりに import './foo' と書けるようになる(拡張子省略)
+		extensions: ['.js', '.vue'],
+	},
+	plugins: [
+		new VueLoaderPlugin()
+	],
 	module: {
 		rules: [
 			{
