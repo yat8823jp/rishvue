@@ -44,6 +44,13 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
+				test: /\.(jpg|png|gif)$/,
+				loader: 'url-loader',
+				query: {
+					limit: 10240
+				}
+			},
+			{
 				test: /\.scss/,
 				use: [
 					'style-loader',
