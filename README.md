@@ -18,3 +18,8 @@ developmode mode
 production mode
 
 ``` $npm run build ```
+
+## description 
+
+### VueLoaderPlugin
+This plugin for vue-loader 15.
